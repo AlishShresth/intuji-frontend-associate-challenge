@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Intuji Design Challenge</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 
   <body>
@@ -113,6 +113,8 @@
             </div>
           </div>
         </div>
+      </section>
+      <section class="main__body">
         <div class="overview__container">
           <h1 class="overview__container--header">Overview</h1>
           <div class="overview__cards">
@@ -182,7 +184,158 @@
             </div>
           </div>
         </div>
+        <div class="saving_plan__container">
+          <div class="saving_plan__header">
+            <h3>Saving Plan</h3>
+            <a href="#">See all</a>
+          </div>
+          <div class="saving_plan__divider"></div>
+          <div class="saving_plan__body">
+            <div class="saving_plan__item">
+              <div class="saving_plan__item--top">
+                <p class="saving_plan__item--title">Bali Vacation</p>
+                <p class="saving_plan__item--target">Target: August 25 2022</p>
+              </div>
+              <div class="saving_plan__item--bottom">
+                <div class="saving_plan__item--amount__container">
+                  <div class="saving_plan__item--amount">
+                    <h1>$ 1950,21</h1>
+                    <p>/ $ 4000</p>
+                  </div>
+                  <p class="saving_plan__item--percentage">48%</p>
+                </div>
+                <div class="saving_plan__item--range-container">
+                  <input type="range" min="0" max="100" value="48" class="saving_plan__item--range" disabled>
+                </div>
+              </div>
+            </div>
+            <div class="saving_plan__item">
+              <div class="saving_plan__item--top">
+                <p class="saving_plan__item--title">New Gadget</p>
+                <p class="saving_plan__item--target">Target: August 25 2022</p>
+              </div>
+              <div class="saving_plan__item--bottom">
+                <div class="saving_plan__item--amount__container">
+                  <div class="saving_plan__item--amount">
+                    <h1>$ 790,21</h1>
+                    <p>/ $ 1000</p>
+                  </div>
+                  <p class="saving_plan__item--percentage orange">79%</p>
+                </div>
+                <div class="saving_plan__item--range-container">
+                  <input type="range" min="0" max="100" value="79" class="saving_plan__item--range range-orange"
+                    disabled>
+                </div>
+              </div>
+            </div>
+            <div class="saving_plan__item">
+              <div class="saving_plan__item--top">
+                <p class="saving_plan__item--title">Charity</p>
+                <p class="saving_plan__item--target">Target: August 25 2022</p>
+              </div>
+              <div class="saving_plan__item--bottom">
+                <div class="saving_plan__item--amount__container">
+                  <div class="saving_plan__item--amount">
+                    <h1>$ 32,111</h1>
+                    <p>/ $ 100</p>
+                  </div>
+                  <p class="saving_plan__item--percentage green">32%</p>
+                </div>
+                <div class="saving_plan__item--range-container-green">
+                  <input type="range" min="0" max="100" value="32" class="saving_plan__item--range-green" disabled>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="analytics__container">
+          <div class="analytics__controls">
+            <h3>Analytics</h3>
+            <div class="analytics__controls--labels">
+              <span><span class="dot purple "></span>Label1</span>
+              <span><span class="dot orange"></span>Label2</span>
+              <select id="timeframe">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+              </select>
+            </div>
+          </div>
+          <canvas id="analyticsChart"></canvas>
+        </div>
+        <div class="recent_transaction__container">
+          <div class="recent_transaction__header">
+            <h3>Recent Transaction</h3>
+            <a href="#">See all</a>
+          </div>
+          <div class="recent_transaction__divider"></div>
+          <div class="recent_transaction__body">
+            <div class="recent_transaction__item">
+              <div class="recent_transaction__item--left">
+                <div class="recent_transaction__item--left__icon">
+                  <img src="/assets/gallery.svg" alt="gallery" />
+                </div>
+                <div class="recent_transaction__item--left__text">
+                  <p class="recent_transaction__item--left__title">Figma</p>
+                  <p class="recent_transaction__item--left__date">August 20, 2022</p>
+                </div>
+              </div>
+              <div class="recent_transaction__item--right">
+                <h1 class="recent_transaction__item--right__amount">$ 100</h1>
+                <p class="recent_transaction__item--right__status">Completed</p>
+              </div>
+            </div>
+            <div class="recent_transaction__item">
+              <div class="recent_transaction__item--left">
+                <div class="recent_transaction__item--left__icon">
+                  <img src="/assets/gallery.svg" alt="gallery" />
+                </div>
+                <div class="recent_transaction__item--left__text">
+                  <p class="recent_transaction__item--left__title">Youtube</p>
+                  <p class="recent_transaction__item--left__date">August 20, 2022</p>
+                </div>
+              </div>
+              <div class="recent_transaction__item--right">
+                <h1 class="recent_transaction__item--right__amount">$ 120</h1>
+                <p class="recent_transaction__item--right__status">Completed</p>
+              </div>
+            </div>
+            <div class="recent_transaction__item">
+              <div class="recent_transaction__item--left">
+                <div class="recent_transaction__item--left__icon">
+                  <img src="/assets/gallery.svg" alt="gallery" />
+                </div>
+                <div class="recent_transaction__item--left__text">
+                  <p class="recent_transaction__item--left__title">Spotify</p>
+                  <p class="recent_transaction__item--left__date">August 20, 2022</p>
+                </div>
+              </div>
+              <div class="recent_transaction__item--right">
+                <h1 class="recent_transaction__item--right__amount">$ 15</h1>
+                <p class="recent_transaction__item--right__status">Completed</p>
+              </div>
+            </div>
+            <div class="recent_transaction__item">
+              <div class="recent_transaction__item--left">
+                <div class="recent_transaction__item--left__icon">
+                  <img src="/assets/gallery.svg" alt="gallery" />
+                </div>
+                <div class="recent_transaction__item--left__text">
+                  <p class="recent_transaction__item--left__title">Freepik</p>
+                  <p class="recent_transaction__item--left__date">August 20, 2022</p>
+                </div>
+              </div>
+              <div class="recent_transaction__item--right">
+                <h1 class="recent_transaction__item--right__amount">$ 300</h1>
+                <p class="recent_transaction__item--right__status">Completed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </section>
+      <script src="/index.js"></script>
+
   </body>
 
 </html>
